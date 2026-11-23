@@ -14,6 +14,10 @@
 /* Responsive team cards: one readable card per row on phones */
 @media(max-width:680px){.people{grid-template-columns:1fr;gap:12px}.people-two{grid-template-columns:1fr;max-width:none}.person{grid-template-columns:136px minmax(0,1fr);min-height:190px}.portrait{width:136px;min-height:190px}.person-info{min-width:0}.person h3,.person-bio,.edit-label{overflow-wrap:anywhere}.person-bio{min-height:0}}
 @media(max-width:420px){.person{grid-template-columns:112px minmax(0,1fr);min-height:180px}.portrait{width:112px;min-height:180px}.person-info{padding:12px 10px}}
+
+/* Prevent the architecture portrait from covering names on narrow screens */
+@media(max-width:680px){.people-two .person{grid-template-columns:136px minmax(0,1fr)}.people-two .person>.portrait{width:100%;min-width:0}.people-two .person-info{position:relative;z-index:1;padding-left:14px}}
+@media(max-width:420px){.people-two .person{grid-template-columns:112px minmax(0,1fr)}.people-two .person>.portrait{width:100%}}
 </style>
 </head>
 <body>
